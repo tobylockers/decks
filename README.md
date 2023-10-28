@@ -1,6 +1,6 @@
 # **decks** 
 
-Completed for a practice coursework project for Year 10 Computer Science, 
+Completed for a Computer Science practice coursework project, 
 **decks** is a simple terminal-based card game for two players including a set of rules, an intergrated scoreboard and user verification.
 
 A standard game follows this logic:
