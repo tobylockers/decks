@@ -1,4 +1,4 @@
-# **decks** - programmed by tobylockers
+# **decks** 
 
 Programmed as part of a practice coursework project completed for Year 10 Computer Science, 
 **decks** is a a simple terminal-based card game for two players including a set of rules and intergrated scoreboard.
