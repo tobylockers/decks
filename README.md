@@ -1,8 +1,5 @@
 # **decks** 
 
-> [!NOTE]
-> Usernames and passwords can be found in the 'details.json' file.
-
 Completed for a practice coursework project for Year 10 Computer Science, 
 **decks** is a simple terminal-based card game for two players including a set of rules, an intergrated scoreboard and user verification.
 
@@ -23,4 +20,7 @@ A standard game follows this logic:
     - The winner takes the other player's card.
 
 At the end of each game, the player with the most cards is the winner. The top players will be shown on a leaderboard.
+
+> [!IMPORTANT]
+> Usernames and passwords can be found in the 'details.json' file.
 
