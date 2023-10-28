@@ -4,7 +4,7 @@
 > Usernames and passwords can be found in the 'details.json' file.
 
 Programmed as part of a practice coursework project completed for Year 10 Computer Science, 
-**decks** is a a simple terminal-based card game for two players including a set of rules and intergrated scoreboard.
+**decks** is a a simple terminal-based card game for two players including a set of rules, an intergrated scoreboard and user verification.
 
 A standard game follows this logic:
   - A deck features 30 cards, with three colours and numbers from 1 to 10 (they are all unique)
