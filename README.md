@@ -19,7 +19,7 @@ A standard game follows this logic:
 
     - The winner takes the other player's card.
 
-At the end of each game, the player with the most cards is the winner. The top players will be shwon on a leaderboard.
+At the end of each game, the player with the most cards is the winner. The top players will be shown on a leaderboard.
 
 Player data can be found in the 'details.json' file.
 
