@@ -1,4 +1,4 @@
-# DECKS, version 1 - programmed by Toby Loughlin
+# DECKS, version 1 - programmed by tobylockers
 import os
 import time
 import random
