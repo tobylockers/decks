@@ -3,6 +3,7 @@ import os
 import time
 import random
 import json
+from getpass import getpass
 
 print('Welcome to DECKS, version 1', '\n')
 
@@ -13,11 +14,16 @@ def clear():
     os.system('cls') # Clears shell history
 
 def details_check(user, pswd): # Look up against something
-    if user == '':
+    try:
+        if user == '':
+            print(accountError)
+            signin()
+        else:
+            return details[user]["password"] == pswd
+    except:
+        pass
         print(accountError)
         signin()
-    else:
-        return details[user]["password"] == pswd
 
 def signin():
     global details
@@ -25,6 +31,7 @@ def signin():
         with open('details.json') as file:
             details = json.load(file)
     except:
+        pass
         print(fileError)
         exit()
     
@@ -34,9 +41,9 @@ def signin():
     print('Account sign-in')
     
     if not p1_signedin:
-        p1_username = input('PLAYER 1, Enter your username: ')
-        p1_password = input('PLAYER 1, Enter your password: ')
-        if details_check(p1_username, p1_password):# Authentication
+        p1_username = input('PLAYER 1, enter your username: ')
+        p1_password = getpass(prompt = 'PLAYER 1, enter your password: ')
+        if details_check(p1_username, p1_password): # Authentication
             print('\n', 'PLAYER 1 -', p1_username, 'signed in.', '\n')
             p1_signedin = True # Authorisation
             time.sleep(1)
@@ -44,8 +51,8 @@ def signin():
         else:
             print(accountError)
     if not p2_signedin:
-        p2_username = input('PLAYER 2, Enter your username: ')
-        p2_password = input('PLAYER 2, Enter your password: ')
+        p2_username = input('PLAYER 2, enter your username: ')
+        p2_password = getpass(prompt = 'PLAYER 2, enter your password: ')
         if details_check(p2_username, p2_password):
             if p2_username == p1_username:
                 print('\n', 'PLAYER 1 is already using that account!')
@@ -124,12 +131,14 @@ try:
     with open('details.json', 'w') as file: # Write to file
         json.dump(details, file, indent = 4)
 except:
+    pass
     print(fileError)
     exit()
     
 scores_list = {key: value["wins"] for key, value in details.items()} # Creates a new dictionary with the player and wins
 sorted_scores_list = sorted([(value, key) for (key, value) in scores_list.items()], reverse = True) # Creates a list of lists, ordered by winner, desc.
 print('TOP 5 - WINS:')
+
 for k in sorted_scores_list:
     print(k[0], '-', k[1]) # Loops and prints it out
     
